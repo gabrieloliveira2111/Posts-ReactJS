@@ -1,0 +1,15 @@
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto 0 auto;
+    width: 40vw;
+    height: 22vh;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.headIcon {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}

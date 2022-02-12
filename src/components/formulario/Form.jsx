@@ -2,11 +2,12 @@ import React from 'react'
 import './Form.css'
 
 const Form = () => {
-    return(
+    return (
         <form className="formContainer">
-            <h2 className="formTitle">No que está pensando?</h2>
-            <input type="text" placeholder="Título da publicação" className="inputTitle"/>
-            <textarea type="text" placeholder="Conteúdo da publicação" className="inputContent"/>
+            <h2 className="title">No que está pensando?</h2>
+            <input type="text" placeholder="Nome completo" className="input"/>
+            <input type="email" placeholder="E-mail" className="input"/>
+            <textarea type="text" placeholder="Conteúdo da publicação" className="input formContent"/>
             <button type="submit" className="formBtn">Criar</button>
         </form>
     )
