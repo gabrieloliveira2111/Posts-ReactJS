@@ -22,7 +22,7 @@
     border: 1px solid rgb(230, 230, 230);
     cursor: pointer;
 }
-.formContent {
+.formComments {
     height: 25%;
     margin-bottom: 20px;
     resize: none;
@@ -35,6 +35,9 @@
     color: #fff;
     border: none;
     text-transform: uppercase;  
+}
+.formBtn[disabled] {
+    background-color: #85b17d;
 }
 .input:hover::placeholder {
     padding-left: 10px;

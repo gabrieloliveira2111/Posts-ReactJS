@@ -1,6 +1,6 @@
 .postContainer {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 15px auto 0 auto;
     width: 40vw;
     height: 22vh;
@@ -8,8 +8,28 @@
     border: 1px solid #fff;
     border-radius: 10px;
 }
+.postContent {
+    display: flex;
+    margin: 10px;
+}
+.postInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.info {
+    margin-bottom: 10px;
+}
 .headIcon {
     border-radius: 100%;
     width: 60px;
     height: 60px;
+}
+.postBtn {
+    border: none;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    font-size: 20px;
 }
