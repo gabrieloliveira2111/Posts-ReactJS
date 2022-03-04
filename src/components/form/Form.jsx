@@ -9,18 +9,19 @@ const Form = ({ handleAddPost }) => {
     const [error, setError] = useState(null)
 
     const handleSubmit = (e) => {
-        const validateName = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/.test(name)
         e.preventDefault()
-        if (validateName) {
-            handleAddPost(name, email, comment)
-        } else {
-            setError(true)
-            setTimeout(() => {
-                setError(false)
-            }, 3000)
-        }
+        handleAddPost(name, email, comment)
     }
 
+    const handleChange = (e) => {
+        setName(e.target.value)
+        const validateName = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/.test(e.target.value)
+        if (validateName) {
+            setError(false)
+        } else {
+            setError(true)
+        }
+    }
 
     return (
         <form className="formContainer" onSubmit={handleSubmit}>
@@ -31,7 +32,8 @@ const Form = ({ handleAddPost }) => {
                 className="input"
                 required
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
+                onBlur={handleChange}
             />
             <input
                 type="email"
